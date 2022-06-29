@@ -1334,6 +1334,118 @@ header {
   cursor: pointer;
 }
 
+.popup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 9999;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: none;
+}
+
+.popup.active {
+  display: block;
+}
+
+.form__container {
+  background: #ffffff;
+  padding: 89px 146px;
+  top: 50%;
+  transform: translateY(-50%);
+  border-radius: 5px;
+  max-width: 490px;
+  margin: 0 auto;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.form__container h4 {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 24px;
+  text-align: center;
+  color: #2e3843;
+}
+
+.form__container form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  max-width: 366px;
+  width: 100%;
+  margin-top: 30px;
+}
+
+.form__container form button {
+  border: none;
+  margin-top: 30px;
+  width: 100%;
+}
+
+.form__container form input {
+  background: rgba(149, 175, 192, 0.1);
+  border-radius: 20px;
+  padding: 25px 20px;
+  width: 100%;
+}
+
+.form__container form input:first-child {
+  margin-bottom: 25px;
+}
+
+.form__container form input::-moz-placeholder {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+  text-transform: capitalize;
+  color: #000000;
+}
+
+.form__container form input:-ms-input-placeholder {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+  text-transform: capitalize;
+  color: #000000;
+}
+
+.form__container form input::placeholder {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+  text-transform: capitalize;
+  color: #000000;
+}
+
+.close__popup {
+  position: absolute;
+  top: 7%;
+  right: 5%;
+  cursor: pointer;
+}
+
+.close__popup span {
+  width: 20px;
+  height: 2px;
+  display: block;
+  background: black;
+}
+
+.close__popup span:first-child {
+  transform: rotate(45deg);
+}
+
+.close__popup span:last-child {
+  transform: rotate(136deg) translate(-1px, 2px);
+}
+
 .webp .hero__right::after { background: url(../img/hero1.webp); }
 
 .webp .hero__right::before { background: url(../img/hero2.webp); }

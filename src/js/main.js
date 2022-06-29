@@ -2,7 +2,7 @@ import * as flsFunctions from "./modules/function.js";
 import Swiper, { FreeMode, Navigation, Pagination } from "swiper";
 import { Fancybox } from "@fancyapps/ui";
 import "swiper/css/bundle";
-import $ from "jquery"
+import $ from "jquery";
 import "@fancyapps/ui/dist/fancybox.css";
 flsFunctions.isWebp();
 Swiper.use([Navigation, Pagination]);
@@ -47,19 +47,34 @@ burger.addEventListener("click", () => {
   menu.classList.toggle("active");
 });
 
-
-var $page = $('html, body');
-$('.navigation ul li a[href*="#"]').click(function() {
-    $page.animate({
-        scrollTop: $($.attr(this, 'href')).offset().top
-    }, 400);
-    return false;
-});
-
-$('.footer__menu ul li a[href*="#"]').click(function() {
-  $page.animate({
-      scrollTop: $($.attr(this, 'href')).offset().top
-  }, 400);
+var $page = $("html, body");
+$('.navigation ul li a[href*="#"]').click(function () {
+  $page.animate(
+    {
+      scrollTop: $($.attr(this, "href")).offset().top,
+    },
+    400
+  );
   return false;
 });
 
+$('.footer__menu ul li a[href*="#"]').click(function () {
+  $page.animate(
+    {
+      scrollTop: $($.attr(this, "href")).offset().top,
+    },
+    400
+  );
+  return false;
+});
+
+const openPopup = document.querySelector("#openPopup");
+const popup = document.querySelector(".popup");
+openPopup.addEventListener("click",()=>{
+  popup.classList.add("active")
+})
+
+const closePopup = document.querySelector(".close__popup")
+closePopup.addEventListener("click", ()=>{
+  popup.classList.remove("active")
+})
