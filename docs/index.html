@@ -4,12 +4,12 @@
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="css/style.min.css?_v=20220629173248" />
+  <link rel="stylesheet" href="css/style.min.css?_v=20220630161428" />
   <title>Home</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link
-    href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700&display=swap&_v=20220629173248"
+    href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700&display=swap&_v=20220630161428"
     rel="stylesheet"
   />
 </head>
@@ -19,7 +19,7 @@
   <div class="container">
     <div class="header__flex">
       <div class="header__logo">
-        <img src="img/logo.svg" alt="" />
+        <a href="/"><img src="img/logo.svg" alt="" /></a>
       </div>
       <div class="header__menu">
         <div class="header__contact">
@@ -472,7 +472,7 @@
           </div>
         </div>
       </section>
-      <section>
+      <section class="trenera" id="">
         <div class="container">
           <div class="section__title">
             <h2>Тренерський склад ProffiCamp</h2>
@@ -544,7 +544,7 @@
                 <li>Щоденне прання тренувальної форми UFT</li>
               </ul>
               <p>7600 грн</p>
-              <a href="" class="btn">Замовити</a>
+              <a href="./anketa.html" class="btn">Замовити</a>
             </div>
             <div class="price__item">
               <h3>Day</h3>
@@ -561,24 +561,26 @@
                 <li>Тестування 2-разове</li>
               </ul>
               <p>5300 грн</p>
-              <a href="" class="btn">Замовити</a>
+              <a href="./anketa.html" class="btn">Замовити</a>
             </div>
           </div>
         </div>
       </section>
     </main>
     <div class="popup popup-form">
-  
   <div class="form__container">
     <div class="close__popup">
       <span></span><span></span>
     </div>
     <h4>Заповніть форму, щоб зв’язатись з вами</h4>
-    <form action="">
-      <input type="text" name="" id="" placeholder="Ім’я">
-      <input type="tel" name="" id="" placeholder="Номер телефону">
+    <form action="" method="post">
+      <input type="text" name="name" id="" placeholder="Ім’я">
+      <input type="tel" name="phone" id="" placeholder="Номер телефону">
       <button type="submit" class="btn">Надіслати</button>
     </form>
+  </div>
+  <div class="form__success">
+    <picture><source srcset="img/formSuccsess.webp" type="image/webp"><img src="img/formSuccsess.png" alt=""></picture>
   </div>
 </div>
 <footer class="footer">
@@ -605,7 +607,7 @@
       <div class="footer__menu">
         <ul>
           <li><a href="">Договір оферти </a></li>
-          <li><a href="">Анкета</a></li>
+          <li><a href="./anketa.html">Анкета</a></li>
           <li><a href="">Політика конфіденційності</a></li>
         </ul>
       </div>
@@ -667,6 +669,6 @@
   </div>
 </footer>
 
-    <script src="js/main.min.js?_v=20220629173248"></script>
+    <script src="js/main.min.js?_v=20220630161428"></script>
   </body>
 </html>

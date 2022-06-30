@@ -70,11 +70,52 @@ $('.footer__menu ul li a[href*="#"]').click(function () {
 
 const openPopup = document.querySelector("#openPopup");
 const popup = document.querySelector(".popup");
-openPopup.addEventListener("click",()=>{
-  popup.classList.add("active")
-})
+openPopup.addEventListener("click", () => {
+  popup.classList.add("active");
+});
 
-const closePopup = document.querySelector(".close__popup")
-closePopup.addEventListener("click", ()=>{
-  popup.classList.remove("active")
-})
+const closePopup = document.querySelector(".close__popup");
+closePopup.addEventListener("click", () => {
+  popup.classList.remove("active");
+});
+
+$(document).ready(function () {
+  $(".popup-form form").submit(function (e) {
+    //устанавливаем событие отправки для формы с id=form
+    var form_data = $(this).serialize(); //собераем все данные из формы
+    e.preventDefault();
+    $.ajax({
+      type: "POST", //Метод отправки
+      url: "../files/sendForm.php", //путь до php фаила отправителя
+      data: form_data,
+      success: function (data) {
+        document.querySelector(".form__container").style.display = "none";
+        document.querySelector(".form__success").style.display = "flex";
+        setTimeout(()=>{
+          popup.classList.remove("active");
+        }, 2500);
+      },
+    });
+  });
+});
+
+
+$(document).ready(function () {
+  $(".form__anketa").submit(function (e) {
+    //устанавливаем событие отправки для формы с id=form
+    var form_data = $(this).serialize(); //собераем все данные из формы
+    e.preventDefault();
+    $.ajax({
+      type: "POST", //Метод отправки
+      url: "../files/sendAnket.php", //путь до php фаила отправителя
+      data: form_data,
+      success: function (data) {
+        // document.querySelector(".form__container").style.display = "none";
+        // document.querySelector(".form__success").style.display = "flex";
+        // setTimeout(()=>{
+        //   popup.classList.remove("active");
+        // }, 2500);
+      },
+    });
+  });
+});
