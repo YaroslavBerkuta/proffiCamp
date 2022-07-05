@@ -1,6 +1,10 @@
 @import "./normalize.scss";
+@import "./mobil.scss";
 body {
   font-family: "Rubik", sans-serif;
+  overflow-x: hidden;
+}
+main {
   overflow-x: hidden;
 }
 section {
@@ -28,12 +32,18 @@ header {
 }
 .header__contact {
   margin-right: 30px;
+  &:hover {
+    a {
+      color: #4b6584;
+    }
+  }
   a {
+    transition: all 0.2s linear;
     font-weight: 500;
     font-size: 15px;
     line-height: 18px;
     color: #4b6584;
-    background: url(@img/phone.svg) center left no-repeat;
+    background: url(@img/phone.svg) center left/contain no-repeat;
     padding-left: 30px;
   }
 }
@@ -47,7 +57,7 @@ header {
     &:hover {
       svg {
         path {
-          fill: #629ee6;
+          fill: #4b6584;
         }
       }
     }
@@ -184,6 +194,15 @@ header {
 .bg-gray {
   background: #f7f7ffc0;
   padding: 35px 0;
+  .section__title{
+    margin-bottom: 30px;
+    &:after {
+      content: none;
+    }
+    &:before {
+      content: none;
+    }
+  }
 }
 .brand__swiper {
   overflow: visible !important;
@@ -263,7 +282,7 @@ header {
   }
 }
 .program {
-  background: url(@img/bgProgram.png) center/cover no-repeat;
+  background: url(@img/bgProgram.svg) center/cover no-repeat;
   .section__title {
     &:after {
       position: absolute;
@@ -345,7 +364,7 @@ header {
   opacity: 0.3;
   transition: opacity 0.3s linear;
   max-width: 80%;
-  height: 433px;
+  height: 433px !important;
   cursor: pointer;
   img {
     width: 100%;
@@ -580,6 +599,7 @@ header {
   &:last-child {
     margin-top: 80px;
     align-items: center;
+    padding-right: 120px;
     .test__list {
       max-width: 580px;
     }
@@ -692,6 +712,7 @@ header {
       top: 0;
       left: 0;
       z-index: -1;
+      opacity: 0.1;
     }
     &:before {
       content: "";
@@ -704,6 +725,7 @@ header {
       right: -3%;
       z-index: -1;
       transform: translateY(-50%);
+      opacity: 0.1;
     }
   }
   .section__title {
@@ -791,7 +813,13 @@ header {
     align-items: center;
     justify-content: space-between;
     li {
+      &:hover {
+        a {
+          color: #629ee6;
+        }
+      }
       a {
+        transition: all 0.2s linear;
         font-weight: 400;
         font-size: 16px;
         line-height: 19px;
@@ -840,7 +868,13 @@ header {
     justify-content: space-between;
     flex-direction: column;
     li {
+      &:hover {
+        a {
+          color: #629ee6;
+        }
+      }
       a {
+        transition: all 0.2s linear;
         font-weight: 400;
         font-size: 16px;
         line-height: 19px;
@@ -873,7 +907,7 @@ header {
     display: block;
   }
 }
-.form__success{
+.form__success {
   top: 50%;
   transform: translateY(-50%);
   border-radius: 5px;
@@ -1179,6 +1213,94 @@ form {
     }
   }
 }
-.trenera{
+.trenera {
   display: none;
+}
+.form__send {
+  position: fixed;
+  top: 5%;
+  right: 0;
+  background: #6ab04c;
+  border-radius: 20px;
+  padding: 15px 30px;
+  overflow: hidden;
+  display: none;
+  &.active {
+    display: block;
+  }
+  &:after {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    content: "";
+    height: 8px;
+    width: 100%;
+    background: #5eeb21;
+    display: block;
+    animation: formComplate 2s linear;
+  }
+  h5 {
+    font-size: 18px;
+    text-align: center;
+    color: white;
+    text-transform: uppercase;
+  }
+  p {
+    text-align: center;
+    color: white;
+    margin-top: 5px;
+  }
+}
+@keyframes formComplate {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 100%;
+  }
+}
+.close__menu {
+  position: absolute;
+  top: 3%;
+  right: 6%;
+  display: block;
+  cursor: pointer;
+  span {
+    display: block;
+    background: #4b6584;
+    height: 3px;
+    width: 36px;
+    margin: 6px 0;
+    &:first-child {
+      transform: rotate(45deg);
+    }
+    &:last-child {
+      transform: rotate(-45deg) translate(6px, -7px);
+    }
+  }
+}
+#perevaga .train__control {
+  display: none;
+}
+.time__img {
+  border-radius: 20px;
+  overflow: hidden;
+  max-width: 60%;
+  width: 100%;
+}
+.birthday {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 43%;
+  width: 100%;
+  margin-bottom: 15px;
+  background: rgba(149, 175, 192, 0.1);
+  border-radius: 20px;
+  padding: 26px 20px;
+  input {
+    margin-bottom: 0;
+    background: transparent;
+    padding: 0;
+  }
 }

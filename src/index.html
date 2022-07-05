@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-  @@include('html/head.html',{ "title": "Home" })
+  @@include('html/head.html',{ "title": "UFT Camp" })
   <body>
     @@include('html/header.html')
     <main class="main">
@@ -22,106 +22,191 @@
       </section>
       <section class="bg-gray">
         <div class="container">
+          <div class="section__title">
+            <h2>Наші партнери</h2>
+          </div>
           <div class="swiper brand__swiper">
             <div class="swiper-wrapper">
-              <div class="brand__slide swiper-slide">
+              <a class="brand__slide swiper-slide" href="https://hoe.com.ua/post/nlk-sp-jablunevij-sad.html">
                 <img src="@img/djerelce.png" alt="" />
-              </div>
-              <div class="brand__slide swiper-slide">
+              </a>
+              <a class="brand__slide swiper-slide" href="https://www.facebook.com/dufukraine/">
+                <img src="@img/footTrain.jpg" alt="" />
+              </a>
+              <a class="brand__slide swiper-slide" href="http://www.bravry.com">
                 <img src="@img/bravry.png" alt="" />
-              </div>
-              <div class="brand__slide swiper-slide">
+              </a>
+              <a class="brand__slide swiper-slide" href="https://football-test.online">
                 <img src="@img/testing.png" alt="" />
-              </div>
-              <div class="brand__slide swiper-slide">
+              </a>
+              <a class="brand__slide swiper-slide" href="https://www.royalsport.it/">
                 <img src="@img/royal.png" alt="" />
-              </div>
-              <div class="brand__slide swiper-slide">
+              </a>
+              <a class="brand__slide swiper-slide" href="https://www.facebook.com/profile.php?id=100015137682146">
                 <img src="@img/proffiBall.png" alt="" />
-              </div>
-              <div class="brand__slide swiper-slide">
+              </a>
+              <a class="brand__slide swiper-slide" href="https://r-building.com.ua/en">
                 <img src="@img/r.png" alt="" />
-              </div>
+              </a>
             </div>
           </div>
         </div>
       </section>
-      <section  id="perevaga">
+      <section id="perevaga">
         <div class="container">
           <div class="section__title">
             <h2>ProffiCAMP пропонує</h2>
           </div>
-          <div class="service__flex">
-            <div class="service__item">
-              <div class="service__img">
-                <img src="@img/team.png" alt="" />
+          <div class="service__slide swiper">
+            <div class="service__flex swiper-wrapper">
+              <div class="service__item swiper-slide">
+                <div class="service__img">
+                  <img src="@img/team.png" alt="" />
+                </div>
+                <div class="service__detail">
+                  <p>100% футбольна атмосфера</p>
+                </div>
               </div>
-              <div class="service__detail">
-                <p>100% футбольна атмосфера</p>
+              <div class="service__item swiper-slide">
+                <div class="service__img">
+                  <img src="@img/mozgi.png" alt="" />
+                </div>
+                <div class="service__detail">
+                  <p>Комплексний розвиток гравця</p>
+                </div>
+              </div>
+              <div class="service__item swiper-slide">
+                <div class="service__img">
+                  <img src="@img/blank.png" alt="" />
+                </div>
+                <div class="service__detail">
+                  <p>Офіційне тестування в 1-й та 7-й день Кемпу</p>
+                </div>
+              </div>
+              <div class="service__item swiper-slide">
+                <div class="service__img">
+                  <img src="@img/icons8M.png" alt="" />
+                </div>
+                <div class="service__detail">
+                  <p>Гравець та м’яч 24/7</p>
+                </div>
+              </div>
+              <div class="service__item swiper-slide">
+                <div class="service__img">
+                  <img src="@img/icons8.png" alt="" />
+                </div>
+                <div class="service__detail">
+                  <p>Власна система навчання</p>
+                </div>
+              </div>
+              <div class="service__item swiper-slide">
+                <div class="service__img">
+                  <img src="@img/men.png" alt="" />
+                </div>
+                <div class="service__detail">
+                  <p>5000+ дотиків м’яча в день</p>
+                </div>
+              </div>
+              <div class="service__item swiper-slide">
+                <div class="service__img">
+                  <img src="@img/graph.png" alt="" />
+                </div>
+                <div class="service__detail">
+                  <p>Максимальне вдосконалення Skills&Dribbling</p>
+                </div>
+              </div>
+              <div class="service__item swiper-slide">
+                <div class="service__img">
+                  <img src="@img/food.png" alt="" />
+                </div>
+                <div class="service__detail">
+                  <p>Якісне харчування спортсменів</p>
+                </div>
+              </div>
+              <div class="service__item swiper-slide">
+                <div class="service__img">
+                  <img src="@img/helth.png" alt="" />
+                </div>
+                <div class="service__detail">
+                  <p>24/7 медичний супровід</p>
+                </div>
               </div>
             </div>
-            <div class="service__item">
-              <div class="service__img">
-                <img src="@img/mozgi.png" alt="" />
+            <div class="train__control">
+              <!-- If we need pagination -->
+              <div class="swiper-button-prev">
+                <picture
+                  ><source srcset="img/prev.webp" type="image/webp" />
+                  <img src="img/prev.png" alt=""
+                /></picture>
               </div>
-              <div class="service__detail">
-                <p>Комплексний розвиток гравця</p>
+              <div
+                class="swiper-pagination swiper-pagination-bullets swiper-pagination-horizontal swiper-pagination-bullets-dynamic"
+                style="width: 112px"
+              >
+                <span
+                  class="swiper-pagination-bullet swiper-pagination-bullet-active swiper-pagination-bullet-active-main"
+                  style="left: 28px"
+                ></span
+                ><span
+                  class="swiper-pagination-bullet swiper-pagination-bullet-active-main"
+                  style="left: 28px"
+                ></span
+                ><span
+                  class="swiper-pagination-bullet swiper-pagination-bullet-active-main"
+                  style="left: 28px"
+                ></span
+                ><span
+                  class="swiper-pagination-bullet swiper-pagination-bullet-active-main"
+                  style="left: 28px"
+                ></span
+                ><span
+                  class="swiper-pagination-bullet swiper-pagination-bullet-active-next"
+                  style="left: 28px"
+                ></span
+                ><span
+                  class="swiper-pagination-bullet swiper-pagination-bullet-active-next-next"
+                  style="left: 28px"
+                ></span
+                ><span
+                  class="swiper-pagination-bullet"
+                  style="left: 28px"
+                ></span
+                ><span
+                  class="swiper-pagination-bullet"
+                  style="left: 28px"
+                ></span
+                ><span
+                  class="swiper-pagination-bullet"
+                  style="left: 28px"
+                ></span
+                ><span
+                  class="swiper-pagination-bullet"
+                  style="left: 28px"
+                ></span
+                ><span
+                  class="swiper-pagination-bullet"
+                  style="left: 28px"
+                ></span
+                ><span
+                  class="swiper-pagination-bullet"
+                  style="left: 28px"
+                ></span
+                ><span
+                  class="swiper-pagination-bullet"
+                  style="left: 28px"
+                ></span
+                ><span
+                  class="swiper-pagination-bullet"
+                  style="left: 28px"
+                ></span>
               </div>
-            </div>
-            <div class="service__item">
-              <div class="service__img">
-                <img src="@img/blank.png" alt="" />
-              </div>
-              <div class="service__detail">
-                <p>Офіційне тестування в 1-й та 7-й день Кемпу</p>
-              </div>
-            </div>
-            <div class="service__item">
-              <div class="service__img">
-                <img src="@img/icons8-футбольный-мяч-96.png" alt="" />
-              </div>
-              <div class="service__detail">
-                <p>Гравець та м’яч 24/7</p>
-              </div>
-            </div>
-            <div class="service__item">
-              <div class="service__img">
-                <img src="@img/icons8-диплом-2-96.png" alt="" />
-              </div>
-              <div class="service__detail">
-                <p>Власна система навчання</p>
-              </div>
-            </div>
-            <div class="service__item">
-              <div class="service__img">
-                <img src="@img/men.png" alt="" />
-              </div>
-              <div class="service__detail">
-                <p>5000+ дотиків м’яча в день</p>
-              </div>
-            </div>
-            <div class="service__item">
-              <div class="service__img">
-                <img src="@img/graph.png" alt="" />
-              </div>
-              <div class="service__detail">
-                <p>Максимальне вдосконалення Skills&Dribbling</p>
-              </div>
-            </div>
-            <div class="service__item">
-              <div class="service__img">
-                <img src="@img/food.png" alt="" />
-              </div>
-              <div class="service__detail">
-                <p>Якісне харчування спортсменів</p>
-              </div>
-            </div>
-            <div class="service__item">
-              <div class="service__img">
-                <img src="@img/helth.png" alt="" />
-              </div>
-              <div class="service__detail">
-                <p>24/7 медичний супровід</p>
+              <!-- If we need navigation buttons -->
+              <div class="swiper-button-next">
+                <picture
+                  ><source srcset="img/next.webp" type="image/webp" />
+                  <img src="img/next.png" alt=""
+                /></picture>
               </div>
             </div>
           </div>
@@ -173,93 +258,142 @@
               <div
                 class="train__slide swiper-slide"
                 data-fancybox="gallery"
-                data-src="@img/train2.png"
+                data-src="@img/gallery2.png"
               >
-                <img src="@img/train2.png" alt="" />
+                <img src="@img/gallery2.png" alt="" />
               </div>
               <div
                 class="train__slide swiper-slide"
                 data-fancybox="gallery"
-                data-src="@img/train3.png"
+                data-src="@img/gallery3.png"
               >
-                <img src="@img/train3.png" alt="" />
+                <img src="@img/gallery3.png" alt="" />
               </div>
               <div
                 class="train__slide swiper-slide"
                 data-fancybox="gallery"
-                data-src="@img/train1.png"
+                data-src="@img/gallery4.png"
               >
-                <img src="@img/train1.png" alt="" />
+                <img src="@img/gallery4.png" alt="" />
               </div>
               <div
                 class="train__slide swiper-slide"
                 data-fancybox="gallery"
-                data-src="@img/train2.png"
+                data-src="@img/gallery5.png"
               >
-                <img src="@img/train2.png" alt="" />
+                <img src="@img/gallery5.png" alt="" />
               </div>
               <div
                 class="train__slide swiper-slide"
                 data-fancybox="gallery"
-                data-src="@img/train3.png"
+                data-src="@img/gallery6.png"
               >
-                <img src="@img/train3.png" alt="" />
+                <img src="@img/gallery6.png" alt="" />
               </div>
               <div
                 class="train__slide swiper-slide"
                 data-fancybox="gallery"
-                data-src="@img/train3.png"
+                data-src="@img/gallery8.png"
               >
-                <img src="@img/train3.png" alt="" />
+                <img src="@img/gallery8.png" alt="" />
               </div>
               <div
                 class="train__slide swiper-slide"
                 data-fancybox="gallery"
-                data-src="@img/train3.png"
+                data-src="@img/gallery19.png"
               >
-                <img src="@img/train3.png" alt="" />
+                <img src="@img/gallery9.png" alt="" />
               </div>
               <div
                 class="train__slide swiper-slide"
                 data-fancybox="gallery"
-                data-src="@img/train3.png"
+                data-src="@img/gallery10.png"
               >
-                <img src="@img/train3.png" alt="" />
+                <img src="@img/gallery10.png" alt="" />
               </div>
               <div
                 class="train__slide swiper-slide"
                 data-fancybox="gallery"
-                data-src="@img/train3.png"
+                data-src="@img/gallery12.png"
               >
-                <img src="@img/train3.png" alt="" />
+                <img src="@img/gallery12.png" alt="" />
               </div>
               <div
                 class="train__slide swiper-slide"
                 data-fancybox="gallery"
-                data-src="@img/train3.png"
+                data-src="@img/gallery13.png"
               >
-                <img src="@img/train3.png" alt="" />
+                <img src="@img/gallery13.png" alt="" />
               </div>
               <div
                 class="train__slide swiper-slide"
                 data-fancybox="gallery"
-                data-src="@img/train3.png"
+                data-src="@img/gallery14.png"
               >
-                <img src="@img/train3.png" alt="" />
+                <img src="@img/gallery14.png" alt="" />
               </div>
               <div
                 class="train__slide swiper-slide"
                 data-fancybox="gallery"
-                data-src="@img/train3.png"
+                data-src="@img/gallery15.png"
               >
-                <img src="@img/train3.png" alt="" />
+                <img src="@img/gallery15.png" alt="" />
               </div>
               <div
                 class="train__slide swiper-slide"
                 data-fancybox="gallery"
-                data-src="@img/train3.png"
+                data-src="@img/gallery16.png"
               >
-                <img src="@img/train3.png" alt="" />
+                <img src="@img/gallery16.png" alt="" />
+              </div>
+              <div
+                class="train__slide swiper-slide"
+                data-fancybox="gallery"
+                data-src="@img/gallery17.png"
+              >
+                <img src="@img/gallery17.png" alt="" />
+              </div>
+              <div
+                class="train__slide swiper-slide"
+                data-fancybox="gallery"
+                data-src="@img/gallery18.png"
+              >
+                <img src="@img/gallery18.png" alt="" />
+              </div>
+              <div
+                class="train__slide swiper-slide"
+                data-fancybox="gallery"
+                data-src="@img/gallery19.png"
+              >
+                <img src="@img/gallery19.png" alt="" />
+              </div>
+              <div
+                class="train__slide swiper-slide"
+                data-fancybox="gallery"
+                data-src="@img/gallery20.png"
+              >
+                <img src="@img/gallery20.png" alt="" />
+              </div>
+              <div
+                class="train__slide swiper-slide"
+                data-fancybox="gallery"
+                data-src="@img/gallery21.png"
+              >
+                <img src="@img/gallery21.png" alt="" />
+              </div>
+              <div
+                class="train__slide swiper-slide"
+                data-fancybox="gallery"
+                data-src="@img/gallery22.png"
+              >
+                <img src="@img/gallery22.png" alt="" />
+              </div>
+              <div
+                class="train__slide swiper-slide"
+                data-fancybox="gallery"
+                data-src="@img/gallery23.png"
+              >
+                <img src="@img/gallery23.png" alt="" />
               </div>
             </div>
             <div class="train__control">
@@ -291,8 +425,12 @@
                 <li>FIFA 2022</li>
                 <li>Ліга чемпіонів ProffiCamp</li>
                 <li>
-                  Атака з тренером на <a href="">TikTok</a> та
-                  <a href="">Instagram</a>
+                  Атака з тренером на
+                  <a href="https://vm.tiktok.com/ZMNkLQtKd/">TikTok</a> та
+                  <a
+                    href="https://instagram.com/uft_ukrainian_football_talents?igshid=YmMyMTA2M2Y="
+                    >Instagram</a
+                  >
                 </li>
                 <li>Розмови про футбол</li>
               </ul>
@@ -448,7 +586,7 @@
                 <li>Басейн 1год/ день</li>
                 <li>Вода питна безліміт</li>
                 <li>Соляна кімната за програмою</li>
-                <li>Тренуванна 3-разові/ день+релаксація</li>
+                <li>Тренування 3-разові/ день+релаксація</li>
                 <li>Форма тренувальна UFT 1 комплект</li>
                 <li>Цілодобове медичне забезпечення</li>
                 <li>Безпека перебування в Кемпі -наявність бомбосховища</li>
@@ -461,12 +599,12 @@
             <div class="price__item">
               <h3>Day</h3>
               <ul>
-                <li>5-ти місний номер в будиночку відпочинку, с/в</li>
+                <li>5-ти місний номер <br />в будиночку відпочинку, с/в</li>
                 <li>Обід+фрукти</li>
                 <li>Басейн 1год/ день</li>
-                <li>Вода питна безліміт </li>
+                <li>Вода питна безліміт</li>
                 <li>Соляна кімната за програмою</li>
-                <li>Тренуванна 3-разові/ день+релаксація</li>
+                <li>Тренування 3-разові/ день+релаксація</li>
                 <li>Форма тренувальна UFT 1 комплект</li>
                 <li>Медичне забезпечення</li>
                 <li>Безпека перебування в Кемпі -наявність бомбосховища</li>

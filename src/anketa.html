@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-  @@include('html/head.html',{ "title": "Home" })
+  @@include('html/head.html',{ "title": "UFT Анкета" })
   <body>
     @@include('html/header.html')
     <main class="main">
@@ -9,38 +9,109 @@
           <div class="section__title">
             <h2>Анкета</h2>
           </div>
-          <form  class="form__anketa">
+          <form class="form__anketa">
             <div class="anketa__section">
               <h4>1.Дані дитини</h4>
-              <input type="text" placeholder="Прізвище" name="surnameChildren" />
-              <input type="text" placeholder="Ім’я" name="nameChildren" />
-              <input type="text" placeholder="По батькові" name="fatherChildren" />
+              <input
+                type="text"
+                placeholder="Прізвище"
+                name="surnameChildren"
+                required
+              />
+              <input
+                type="text"
+                placeholder="Ім’я"
+                name="nameChildren"
+                required
+              />
+              <input
+                type="text"
+                placeholder="По батькові"
+                name="fatherChildren"
+                required
+              />
               <div class="sex__container">
                 <label class="custom__cheak">
                   <p>Хлопчик</p>
-                  <input type="radio" checked="checked" name="sex" value="Хлопчик"/>
+                  <input
+                    type="radio"
+                    checked="checked"
+                    name="sex"
+                    value="Хлопчик"
+                  />
                   <span class="checkmark"></span>
                 </label>
                 <label class="custom__cheak">
                   <p>Дівчинка</p>
-                  <input type="radio" name="sex" value="Дівчинка"/>
+                  <input type="radio" name="sex" value="Дівчинка" />
                   <span class="checkmark"></span>
                 </label>
               </div>
-              <input type="date" placeholder="Дата народження" name="birthday" />
-              <input type="text" placeholder="Місто" name="sity" />
-              <input type="number" placeholder="Зріст (см)" name="heith" />
-              <input type="number" placeholder="Вага (кг)" name="vaga" />
-              <input type="text" placeholder="Футбольний досвід" name="dosvid" />
-              <input type="text" placeholder="Команда " name="comand" />
-              <input type="tel" placeholder="Номер телефону" name="phone" />
+              <div class="birthday">
+                <p>День народження</p>
+                <input
+                  type="date"
+                  placeholder="Дата народження"
+                  name="birthday"
+                />
+              </div>
+              <input type="text" placeholder="Місто" name="sity" required />
+              <input
+                type="number"
+                placeholder="Зріст (см)"
+                name="heith"
+                required
+              />
+              <input
+                type="number"
+                placeholder="Вага (кг)"
+                name="vaga"
+                required
+              />
+              <input
+                type="number"
+                placeholder="Футбольний досвід (в роках)"
+                name="dosvid"
+                min="0"
+              />
+              <input
+                type="text"
+                placeholder="Команда "
+                name="comand"
+                required
+              />
+              <input
+                type="tel"
+                placeholder="Номер телефону"
+                name="phone"
+                required
+              />
             </div>
             <div class="anketa__section">
               <h4>2. Дані батьків</h4>
-              <input type="text" placeholder="Прізвище" name="fatherSurname" />
-              <input type="text" placeholder="Ім’я" name="fatherName" />
-              <input type="tel" placeholder="Номер телефону" name="fatherPhone" />
-              <input type="email" placeholder="E-mail" name="fatherEmail" />
+              <input
+                type="text"
+                placeholder="Прізвище"
+                name="fatherSurname"
+                required
+              />
+              <input
+                type="text"
+                placeholder="Ім’я"
+                name="fatherName"
+                required
+              />
+              <input
+                type="tel"
+                placeholder="Номер телефону"
+                name="fatherPhone"
+              />
+              <input
+                type="email"
+                placeholder="E-mail"
+                name="fatherEmail"
+                required
+              />
             </div>
             <div class="anketa__section">
               <h4>3. Додаткова інформація про дитину (необов’язково)</h4>
@@ -52,7 +123,12 @@
               ></textarea>
               <label class="custom__cheak">
                 <p>Бажаю отримати додаткову інформацію від менеджера</p>
-                <input type="checkbox" checked="checked" name="dopInfo" value="Бажаю отримати додаткову інформацію від менеджера" />
+                <input
+                  type="checkbox"
+                  checked="checked"
+                  name="dopInfo"
+                  value="Бажаю отримати додаткову інформацію від менеджера"
+                />
                 <span class="checkmark"></span>
               </label>
               <div class="tarif__flex">
@@ -60,17 +136,32 @@
                   <p>Зміна</p>
                   <label class="custom__cheak">
                     <p>01.08 - 07.08</p>
-                    <input type="radio" checked="checked" name="zmina" value="01.08 - 07.08"/>
+                    <input
+                      type="radio"
+                      checked="checked"
+                      name="zmina"
+                      value="01.08 - 07.08"
+                    />
                     <span class="checkmark"></span>
                   </label>
                   <label class="custom__cheak">
                     <p>08.08 - 14.08</p>
-                    <input type="radio" checked="checked" name="zmina" value="08.08 - 14.08"/>
+                    <input
+                      type="radio"
+                      checked="checked"
+                      name="zmina"
+                      value="08.08 - 14.08"
+                    />
                     <span class="checkmark"></span>
                   </label>
                   <label class="custom__cheak">
                     <p>15.08 - 21.08</p>
-                    <input type="radio" checked="checked" name="zmina" value="15.08 - 21.08"/>
+                    <input
+                      type="radio"
+                      checked="checked"
+                      name="zmina"
+                      value="15.08 - 21.08"
+                    />
                     <span class="checkmark"></span>
                   </label>
                 </div>
@@ -78,12 +169,22 @@
                   <p>Тариф</p>
                   <label class="custom__cheak">
                     <p>Day&Night</p>
-                    <input type="radio" checked="checked" name="tarif" value="Day&Night"/>
+                    <input
+                      type="radio"
+                      checked="checked"
+                      name="tarif"
+                      value="Day&Night"
+                    />
                     <span class="checkmark"></span>
                   </label>
                   <label class="custom__cheak">
                     <p>Day</p>
-                    <input type="radio" checked="checked" name="tarif" value="Day"/>
+                    <input
+                      type="radio"
+                      checked="checked"
+                      name="tarif"
+                      value="Day"
+                    />
                     <span class="checkmark"></span>
                   </label>
                 </div>
@@ -91,17 +192,32 @@
                   <p>Способи оплати</p>
                   <label class="custom__cheak">
                     <p>Готівка</p>
-                    <input type="radio" checked="checked" name="order" value="Готівка"/>
+                    <input
+                      type="radio"
+                      checked="checked"
+                      name="order"
+                      value="Готівка"
+                    />
                     <span class="checkmark"></span>
                   </label>
                   <label class="custom__cheak">
                     <p>Картка фіз.особи</p>
-                    <input type="radio" checked="checked" name="order" value="Картка фіз.особи"/>
+                    <input
+                      type="radio"
+                      checked="checked"
+                      name="order"
+                      value="Картка фіз.особи"
+                    />
                     <span class="checkmark"></span>
                   </label>
                   <label class="custom__cheak">
                     <p>IBAN</p>
-                    <input type="radio" checked="checked" name="order" value="IBAN"/>
+                    <input
+                      type="radio"
+                      checked="checked"
+                      name="order"
+                      value="IBAN"
+                    />
                     <span class="checkmark"></span>
                   </label>
                 </div>
@@ -109,12 +225,22 @@
               <div class="confirm">
                 <label class="custom__cheak-squre">
                   <p>Даю згоду на обробку персональних даних</p>
-                  <input type="checkbox" checked="checked" name="data" value="Так"/>
+                  <input
+                    type="checkbox"
+                    checked="checked"
+                    name="data"
+                    value="Так"
+                  />
                   <span class="checkmark"></span>
                 </label>
                 <label class="custom__cheak-squre">
                   <p>Договір оферти</p>
-                  <input type="checkbox" checked="checked" name="ofert" value="Так"/>
+                  <input
+                    type="checkbox"
+                    checked="checked"
+                    name="ofert"
+                    value="Так"
+                  />
                   <span class="checkmark"></span>
                 </label>
               </div>
@@ -123,6 +249,10 @@
           </form>
         </div>
       </section>
+      <div class="form__send">
+        <h5>Форма надіслана</h5>
+        <p>Наш менеджер з Вами звяжеться!</p>
+      </div>
     </main>
     @@include('html/footer.html')
     <script src="js/main.min.js"></script>

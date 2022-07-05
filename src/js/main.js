@@ -9,9 +9,47 @@ Swiper.use([Navigation, Pagination]);
 const brandSwiper = new Swiper(".brand__swiper", {
   slidesPerView: 4,
   loop: true,
+  breakpoints: {
+    768: {
+      slidesPerView: 3,
+      spaceBetween: 30,
+    },
+    425: {
+      slidesPerView: 3,
+      spaceBetween: 30,
+    },
+    395: {
+      slidesPerView: 2,
+      spaceBetween: 30,
+    },
+    375: {
+      slidesPerView: 2,
+      spaceBetween: 30,
+    },
+    320: {
+      slidesPerView: 2,
+      spaceBetween: 30,
+    },
+  },
 });
+if (window.innerWidth < 550) {
+  const serviceSlide = new Swiper(".service__slide", {
+    slidesPerView: 1,
+    spaceBetween: 20,
+    pagination: {
+      el: ".train__control .swiper-pagination",
+      type: "bullets",
+      dynamicBullets: true,
+      dynamicMainBullets: 4,
+    },
+    navigation: {
+      nextEl: ".train__control .swiper-button-next",
+      prevEl: ".train__control .swiper-button-prev",
+    },
+  });
+}
+
 const trainSlider = new Swiper(".tarin__slider", {
-  loop: true,
   slidesPerView: "auto",
   spaceBetween: 20,
   centeredSlides: true,
@@ -41,7 +79,10 @@ const teamSlide = new Swiper(".team", {
 
 const burger = document.querySelector(".burger");
 const menu = document.querySelector(".navigation");
-
+document.querySelector(".close__menu").addEventListener("click", () => {
+  menu.classList.remove("active");
+  burger.classList.remove("active");
+});
 burger.addEventListener("click", () => {
   burger.classList.toggle("active");
   menu.classList.toggle("active");
@@ -91,14 +132,13 @@ $(document).ready(function () {
       success: function (data) {
         document.querySelector(".form__container").style.display = "none";
         document.querySelector(".form__success").style.display = "flex";
-        setTimeout(()=>{
+        setTimeout(() => {
           popup.classList.remove("active");
         }, 2500);
       },
     });
   });
 });
-
 
 $(document).ready(function () {
   $(".form__anketa").submit(function (e) {
@@ -110,12 +150,19 @@ $(document).ready(function () {
       url: "../files/sendAnket.php", //путь до php фаила отправителя
       data: form_data,
       success: function (data) {
-        // document.querySelector(".form__container").style.display = "none";
-        // document.querySelector(".form__success").style.display = "flex";
-        // setTimeout(()=>{
-        //   popup.classList.remove("active");
-        // }, 2500);
+        document.querySelector(".form__send").classList.add("active");
+        document.querySelector(".form__anketa button").disabled = true;
+        setTimeout(() => {
+          document.querySelector(".form__send").classList.remove("active");
+        }, 2500);
       },
     });
   });
 });
+
+document.querySelectorAll(".navigation ul li a").forEach(item=>{
+  item.addEventListener("click", () => {
+    document.querySelector(".burger").classList.remove("active");
+    document.querySelector(".navigation").classList.remove("active")
+  })
+})

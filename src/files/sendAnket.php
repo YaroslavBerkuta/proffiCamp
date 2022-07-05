@@ -28,13 +28,13 @@ $order = $_POST['order'];
 $data = $_POST['data'];
 $ofert = $_POST['ofert'];
 
-$headers = 'From: yaroslavberkuta@gmail.com' . "\r\n" .
+$headers = 'From: uftcamp@gmail.com' . "\r\n" .
 // Формируем сообщение для отправки, в нём мы соберём всё, что ввели в форме
 $mes = "$surnameChildren,$nameChildren,$fatherChildren,$sex,день народження:$birthday,я з міста:$sity,зріст $heith, вага $vaga, мій досвід: $dosvid, я граю в команді: $comand, мій номер:$phone, ДАННІ про Батьків: $fatherSurname, $fatherName, $fatherPhone, $fatherEmail, $message,$dopInfo, вибрана зміна $zmina,тариф $tarif, оплачую $order, даю згоду на обробку даних $data, договір оферти ознайомлений $ofert";
 
 // Пытаемся отправить письмо по заданному адресу
 // Если нужно, чтобы письма всё время уходили на ваш адрес — замените первую переменную $email на свой адрес электронной почты
-$send = mail('yaroslavberkuta@gmail.com', 'Сайт Eco-Alt телефона форма', $mes,$headers);
+$send = mail("uftcamp@gmail.com", "Анкета в табір ProffiCamp по тарифу $tarif", $mes,$headers);
 // Если отправка прошла успешно — так и пишем
 if ($send == 'true') {echo "Сообщение отправлено";}
 // Если письмо не ушло — выводим сообщение об ошибке
